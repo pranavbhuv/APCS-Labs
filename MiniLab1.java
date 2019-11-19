@@ -8,7 +8,7 @@ public class MiniLab1
 		double sum = 0;
 		for(int k = 0; k < 10; k++)
 		{
-			list[k] = ((int)(Math.random() * 100));
+			list[k] = ((int)(Math.random() * 101));
 			System.out.println("Array spot: " + k + "         Value: " + list[k]);
 			sum += list[k];
 		}
