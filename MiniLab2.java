@@ -11,7 +11,7 @@ public class MiniLab2
 		System.out.println("");
 		for(int a = 0; a < 20; a++)
 		{
-			list[a] = (int)(Math.random() * 100);
+			list[a] = (int)(Math.random() * 101);
 			System.out.println("Array Position: " + a + "\tHas a value of: " + list[a]);
 		}	
 		System.out.println("\nThe number of even numbers are: " + getEvenNumbers(list));
