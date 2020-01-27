@@ -38,11 +38,16 @@ class Film
   int length;
   String rating;
   
+  String runitbackrating = watch[0].rating;
+  String runitbackname = watch[0].title;
+  int runitback = watch[0].length;
+  
   public Film (String sname, int min, String r)
   {
     title = sname;
     length = min;
     rating = r;
+    runitback();
   }
   public void display()
   {
@@ -56,4 +61,18 @@ class Film
   {
     length = ((int)((double)length * (len/100.0))) + length;
   }
+  public void runitback()
+  {
+    if(length < runitback)
+    {
+      runitback = length;
+      runitbacknane = name;
+      runitbackrating = rating;
+    }
+  }
+  pubic void shortestFilm()
+  {
+    System.out.println("Shortest Film:\n Name: " + runitbackname + "\nLength: " + runitback + "\nRating: " + rating); 
+  }
+
 }
