@@ -10,6 +10,7 @@ watch[1] = new Film("Road to Perdition", 117, "G");
 watch[2] = new Film("The Truth about Cats and Dogs", 93, "PG");
 watch[3] = new Film("Enigma", 114, "G");
 
+
 for(int i = 0; i < watch.length; i++)
 {
 watch[i].setLength(10);
@@ -41,7 +42,19 @@ tempindex = i;
 }
 }
 
-System.out.println(watch[tempindex]);
+System.out.println("Shortest Movie: \n" + watch[tempindex]);
+
+Film temp = watch[0];
+watch[0] = watch[watch.length-1];
+watch[watch.length-1] = temp;
+
+System.out.println("\n####################### After Swap ################################\n");
+
+for(Film mov: watch)
+{
+mov.display();
+System.out.println("\t\t");
+}
 
 }
 }
